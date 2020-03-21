@@ -1,0 +1,21 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        },
+        "modules": "false"
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "snowpack/assets/babel-plugin.js",
+      { "dir": "/dist/web_modules", "importMap": "import-map.json" }
+    ]
+  ]
+}
